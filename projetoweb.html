@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Estacionamento</title>
+    <link rel="stylesheet" href="projetoweb.css">
+    <script src="projetoweb.js"> </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Estacionamento de Vinícius Baeta e Vinícius Eduardo</h1>
+        <div class="tarifa">
+            <h4 id="tarifaAtual" >Tarifa:10 reais </h4>
+            <button onclick="alterarTarifa()">Alterar Tarifa</button>
+            <h6><i>OBSERVAÇÕES: A PARTIR DE MEIA HORA O VALOR SERA COBRADO ARREDONDADO</i></h6>
+        </div>
+
+        <h2>Nova Entrada</h2>
+        <div class="entrada-form">
+            <label>Placa: <input type="text" id="placa" placeholder="ABC1234"></label>
+            <br><label>Modelo/Marca: <input type="text" id="modelo" placeholder="Modelo"></label>
+            <br><label>Cor: <input type="text" id="cor" placeholder="Cor"></label>
+            <br><label>Hora de entrada: <input type="number" id="horaEntrada" placeholder="10 horas"></label>
+            <br><label>Minutos da hora de entrada: <input type="number" id="minE" placeholder="30 Minutos"></label>
+            <br><label>Hora de Saida: <input type="number" id="horaSaida" placeholder="11 horas"></label>
+            <br><label>Minutos da hora de saida <input type="number" id="minS" placeholder="30 Minutos"></label>
+            <button onclick="registrarEntrada()">Registrar</button>
+        </div>
+
+        <h2>Registros</h2>
+        <table id="tabela-registros" border="1">
+            <thead>
+                <tr>
+                    <th>Placa</th>
+                    <th>Modelo</th>
+                    <th>Cor</th>
+                    <th>Hora Entrada</th>
+                    <th>Hora Saída</th>
+                    <th>Tempo Arredondado(h)</th>
+                    <th>Valor (R$)</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
